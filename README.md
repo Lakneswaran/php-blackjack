@@ -100,6 +100,8 @@ $username -> setEmail("laknes@yahoo.com");
 
  <!-- whenever we call the function this fuction will run always and first. -->
 
+ <!-- example Card is working So Index, Card,Deck nad Suit is working -->
+
 
 
 
