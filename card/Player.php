@@ -9,8 +9,9 @@ class Player{
     public function __construct($deck)
     {
         for($i=0;$i<2;$i++){
-            $this->cards[]= $deck->drawCard();
+            $this->cards[]= $deck->drawCard();    
         }
+        
     }
 
     
@@ -19,7 +20,6 @@ class Player{
         $score = $this->getScore();
         if($score<=21){
             $this->lost =true;
-
         }
     }
 
@@ -44,6 +44,15 @@ class Player{
 
     public function playcards(){
         return $this->cards;
+    }
+
+    public function showcards(){
+        $displaycards = "";
+        foreach($this->cards as $card) { 
+        $displaycards .= $card->getUnicodeCharacter(true) ." "; 
+        
+      }
+      return $displaycards;
     }
 
 }
